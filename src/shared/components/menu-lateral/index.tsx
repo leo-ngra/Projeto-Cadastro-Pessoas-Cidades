@@ -2,6 +2,7 @@ import { Avatar, Divider, Drawer, Icon, List, ListItemButton, ListItemIcon, List
 import { Box } from "@mui/system"
 import { useMatch, useNavigate, useResolvedPath } from "react-router-dom";
 import { useDrawerContext } from "../../contexts/DrawerContext";
+import { useAppThemeContext } from "../../contexts/ThemeContext";
 
 interface IAppThemeProviderProps {
     children: React.ReactNode;
@@ -41,6 +42,7 @@ export const MenuLateral: React.FC<IAppThemeProviderProps> = ({ children }) => {
     const smDown = useMediaQuery(theme.breakpoints.down('sm'));
 
     const { isDrawerOpen, toggleDrawerOpen, drawerOptions } = useDrawerContext()
+    const { toggleTheme } = useAppThemeContext();
 
     return (
         <>
@@ -63,17 +65,27 @@ export const MenuLateral: React.FC<IAppThemeProviderProps> = ({ children }) => {
 
                     <Box flex={1}>
                         <List component='nav'>
-                            { drawerOptions.map(drawerOptions => (
+                            {drawerOptions.map(drawerOptions => (
                                 <ListItemLink
-                                key={ drawerOptions.path }
-                                icon={ drawerOptions.icon }
-                                to={ drawerOptions.path }
-                                label={ drawerOptions.label }
-                                onClick={ smDown ? toggleDrawerOpen : undefined }
-                            />
+                                    key={drawerOptions.path}
+                                    icon={drawerOptions.icon}
+                                    to={drawerOptions.path}
+                                    label={drawerOptions.label}
+                                    onClick={smDown ? toggleDrawerOpen : undefined}
+                                />
                             ))}
                         </List>
+                    </Box>
 
+                    <Box>
+                        <List component='nav'>
+                            <ListItemButton onClick={toggleTheme}>
+                                <ListItemIcon>
+                                    <Icon>dark_mode</Icon>s
+                                </ListItemIcon>
+                                <ListItemText primary='Alternar Tema' />
+                            </ListItemButton >
+                        </List>
                     </Box>
                 </Box>
             </Drawer>
