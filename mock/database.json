@@ -2,9 +2,33 @@
     "pessoas": [
         {
             "id": 1,
-            "email:": "jusca@gmail.com",
+            "email": "jusca@gmail.com",
             "cidadeId": 1,
             "nomeCompleto": "Juca Silva"
+        },
+        {
+            "id": 2,
+            "email": "mariaparecida@gmail.com",
+            "cidadeId": 1,
+            "nomeCompleto": "Maria Aparecida"
+        },
+        {
+            "id": 3,
+            "email": "carlosnogueira@gmail.com",
+            "cidadeId": 1,
+            "nomeCompleto": "Carlos Nogueira"
+        },
+        {
+            "id": 4,
+            "email": "bentamaria@gmail.com",
+            "cidadeId": 1,
+            "nomeCompleto": "Benta Maria"
+        },
+        {
+            "id": 5,
+            "email": "tatianesousa@gmail.com",
+            "cidadeId": 1,
+            "nomeCompleto": "Tatiane Sousa"
         }
     ]
 }
