@@ -48,7 +48,7 @@ export const ListagemDePessoas = () => {
     }, [busca, pagina]);
   
     const handleDelete = (id: number) => {
-      if (confirm('Realmente deseja apagar?')) {
+      if (window.confirm('Realmente deseja apagar?')) {
         PessoasService.deleteById(id)
           .then(result => {
             if (result instanceof Error) {
@@ -72,6 +72,7 @@ export const ListagemDePessoas = () => {
             mostrarInputBusca
             textoDaBusca={busca}
             textoBotaoNovo='Nova'
+            aoClicarEmNovo={() => navigate('/pessoas/detalhe/nova')}
             aoMudarTextoDeBusca={texto => setSearchParams({ busca: texto, pagina: '1' }, { replace: true })}
           />
         }
