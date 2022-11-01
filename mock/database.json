@@ -1,12 +1,6 @@
 {
   "pessoas": [
     {
-      "id": 7,
-      "email": "mariaparecida@gmail.com",
-      "cidadeId": 1,
-      "nomeCompleto": "Maria Aparecida"
-    },
-    {
       "id": 8,
       "email": "carlosnogueira@gmail.com",
       "cidadeId": 1,
