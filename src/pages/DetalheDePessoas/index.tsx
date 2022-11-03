@@ -7,6 +7,7 @@ import { useNavigate, useParams } from "react-router-dom";
 
 import { FerramentasDeDetalhe } from "../../shared/components/ferramentas-de-detalhe";
 import { VTextField } from "../../shared/form/VTextField";
+import { useForm } from "../../shared/hooks/useForm";
 import { LayoutBaseDePagina } from "../../shared/layouts/LayoutBaseDePagina";
 import { PessoasService } from "../../shared/services/api/PessoasService";
 
@@ -21,7 +22,7 @@ export const DetalheDePessoas = () => {
     const { id = 'nova' } = useParams<'id'>();
     const navigate = useNavigate();
 
-    const formRef = useRef<FormHandles>(null);
+    const { formRef, save, saveAndClose, isSaveAndClose } = useForm();
 
     const [isLoading, setIsLoading] = useState(false);
     const [nome, setNome] = useState('');
@@ -43,8 +44,13 @@ export const DetalheDePessoas = () => {
                         formRef.current?.setData(result)
                     }
                 })
+        } else {
+            formRef.current?.setData({
+                nomeCompleto: '',
+                email: '',
+                cidadeId: '',
+            })
         }
-
     }, [id])
 
     const handleSave = (dados: IFormData) => {
@@ -58,7 +64,11 @@ export const DetalheDePessoas = () => {
                     if (result instanceof Error) {
                         alert(result.message)
                     } else {
-                        navigate(`/pessoas/detalhe/${result}`)
+                        if (isSaveAndClose()) {
+                            navigate(`/pessoas`)
+                        } else {
+                            navigate(`/pessoas/detalhe/${result}`)
+                        }
                     }
                 })
         } else {
@@ -68,6 +78,10 @@ export const DetalheDePessoas = () => {
 
                     if (result instanceof Error) {
                         alert(result.message)
+                    } else {
+                        if (isSaveAndClose()) {
+                            navigate(`/pessoas`)
+                        }
                     }
                 })
         }
@@ -99,9 +113,9 @@ export const DetalheDePessoas = () => {
 
                     aoClicarEmVoltar={() => navigate('/pessoas')}
                     aoClicarEmApagar={() => handleDelete(Number(id))}
-                    aoClicarEmSalvar={() => formRef.current?.submitForm()}
+                    aoClicarEmSalvar={save}
                     aoClicarEmNovo={() => navigate('/pessoas/detalhe/nova')}
-                    aoClicarEmSalvarEVoltar={() => formRef.current?.submitForm()}
+                    aoClicarEmSalvarEVoltar={saveAndClose}
                 />
             }
         >

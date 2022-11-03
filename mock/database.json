@@ -8,7 +8,7 @@
     },
     {
       "id": 9,
-      "nomeCompleto": "Benta Nogues",
+      "nomeCompleto": "Benta branca",
       "email": "bentamaria@gmail.com",
       "cidadeId": 1
     },
@@ -52,6 +52,18 @@
       "id": 16,
       "nomeCompleto": "José de sousa",
       "email": "jose@gmail.com",
+      "cidadeId": "1"
+    },
+    {
+      "nomeCompleto": "Leonardo Nogueira",
+      "email": "leonardo@gmail.com",
+      "cidadeId": "1",
+      "id": 17
+    },
+    {
+      "id": 18,
+      "nomeCompleto": "Ana Maria ",
+      "email": "ana@gmail.com",
       "cidadeId": "1"
     }
   ]
