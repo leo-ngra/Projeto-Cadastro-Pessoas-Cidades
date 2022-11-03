@@ -10,28 +10,28 @@ export const VTextField = ({ name, ...rest }: TVTextFieldProps) => {
 
     const { fieldName, registerField, defaultValue, error, clearError } = useField(name);
 
-    const [ value, setValue ] = useState(defaultValue || '')
-    
+    const [value, setValue] = useState(defaultValue || '')
+
     useEffect(() => {
         registerField({
             name: fieldName,
             getValue: () => value,
-            setValue: (_, newValue) => setValue(newValue) ,
+            setValue: (_, newValue) => setValue(newValue),
         })
     }, [registerField, fieldName, value])
-    
-    return(
+
+    return (
         <TextField
-        { ...rest }
+            {...rest}
 
-        error={!!error}
-        helperText={error}
-        defaultValue={defaultValue}
+            error={!!error}
+            helperText={error}
+            defaultValue={defaultValue}
 
-        value={value}
-        onChange={(e) => setValue(e.target.value)}
+            value={value}
+            onChange={(e) => { setValue(e.target.value); rest.onChange?.(e) }}
 
-        onKeyDown={( ) => error ? clearError() : undefined }
+            onKeyDown={(e) => { error && clearError(); rest.onKeyDown?.(e) }}
         />
     )
 }
