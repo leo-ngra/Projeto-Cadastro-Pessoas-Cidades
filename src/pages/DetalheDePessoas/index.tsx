@@ -7,6 +7,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import * as yup from 'yup'
 
 import { FerramentasDeDetalhe } from "../../shared/components/ferramentas-de-detalhe";
+import { IVFormErrors } from "../../shared/form/IVFormErrors";
 import { VTextField } from "../../shared/form/VTextField";
 import { useForm } from "../../shared/hooks/useForm";
 import { LayoutBaseDePagina } from "../../shared/layouts/LayoutBaseDePagina";
@@ -19,7 +20,7 @@ interface IFormData {
 }
 
 const formValidationSchema: yup.SchemaOf<IFormData> = yup.object().shape({
-    nomeCompleto: yup.string().required('Campo é obrigatório.').min(3, 'O campo precisa ter pelo menos 3 caracteres.'),
+    nomeCompleto: yup.string().required().min(3),
     email: yup.string().required().email(),
     cidadeId: yup.number().required(),
 });
@@ -98,7 +99,7 @@ export const DetalheDePessoas = () => {
                 }
             })
             .catch((errors: yup.ValidationError) => {
-                const validationErrors: { [key: string]: string } = {};
+                const validationErrors: IVFormErrors = {};
 
                 errors.inner.forEach(error => {
                     if(!error.path) return;
