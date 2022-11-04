@@ -1,9 +1,12 @@
-import { Routes, Route, Navigate } from 'react-router-dom'
-import { useDrawerContext } from '../shared/contexts/DrawerContext';
 import { useEffect } from 'react';
+import { Routes, Route, Navigate } from 'react-router-dom'
+
+import { useDrawerContext } from '../shared/contexts/DrawerContext';
 import { Dashboard } from '../pages/dashboard';
-import { ListagemDePessoas } from '../pages/listagem-de-pessoas';
+import { ListagemDePessoas } from '../pages/ListagemDePessoas';
 import { DetalheDePessoas } from '../pages/DetalheDePessoas';
+import { DetalheDeCidades } from '../pages/DetalheDeCidades';
+import { ListagemDeCidades } from '../pages/ListagemDeCidades';
 
 export const AppRoutes = () => {
 
@@ -35,6 +38,9 @@ export const AppRoutes = () => {
 
            <Route path='/pessoas' element={ <ListagemDePessoas /> } />
            <Route path='/pessoas/detalhe/:id' element={<DetalheDePessoas /> } />
+
+           <Route path='/cidades' element={ <ListagemDeCidades /> } />
+           <Route path='/cidades/detalhe/:id' element={<DetalheDeCidades /> } />
 
            <Route path='*' element={<Navigate to='/pagina-inicial' /> } />
             

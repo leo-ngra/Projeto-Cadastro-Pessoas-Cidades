@@ -4,7 +4,7 @@
       "id": 8,
       "nomeCompleto": "Carlos Perairas",
       "email": "carlos@gmail.com",
-      "cidadeId": "1"
+      "cidadeId": 4
     },
     {
       "id": 9,
@@ -65,6 +65,36 @@
       "nomeCompleto": "Ana Maria ",
       "email": "ana@gmail.com",
       "cidadeId": "1"
+    }
+  ],
+  "cidades": [
+    {
+      "nome": "Porto Alegre",
+      "id": 1
+    },
+    {
+      "nome": "São Paulo",
+      "id": 2
+    },
+    {
+      "nome": "São vicente",
+      "id": 3
+    },
+    {
+      "nome": "Novo Hamburgo",
+      "id": 4
+    },
+    {
+      "nome": "Araraquara",
+      "id": 5
+    },
+    {
+      "nome": "Santos",
+      "id": 6
+    },
+    {
+      "nome": "Praia grande",
+      "id": 7
     }
   ]
 }
