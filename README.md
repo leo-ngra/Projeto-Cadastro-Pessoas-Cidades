@@ -13,3 +13,5 @@ yarn add -D json-server
 yarn add axios
 
 yarn add @unform/web @unform/core
+
+yarn add yup
