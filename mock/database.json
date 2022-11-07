@@ -102,5 +102,8 @@
       "nome": "Praia grande",
       "id": 7
     }
-  ]
+  ],
+  "auth": {
+    "accessToken": "aaaaaaaa.bbbbbbb.ccccccc"
+  }
 }
