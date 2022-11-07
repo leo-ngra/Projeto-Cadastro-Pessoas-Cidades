@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom'
 
 import { useDrawerContext } from '../shared/contexts/DrawerContext';
-import { Dashboard } from '../pages/dashboard';
+import { Dashboard } from '../pages/Dashboard';
 import { ListagemDePessoas } from '../pages/ListagemDePessoas';
 import { DetalheDePessoas } from '../pages/DetalheDePessoas';
 import { DetalheDeCidades } from '../pages/DetalheDeCidades';
