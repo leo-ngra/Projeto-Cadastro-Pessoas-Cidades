@@ -8,6 +8,16 @@ Desenvolver uma plataforma que mostra quantas pessoas e cidades estão cadastrad
 Projeto desenvolvido em React com Typescript e utilizando a biblioteca do Material UI para a interface do usuário, é focado a responsividade para melhor experiencia em todos os dispositivos e a troca de tema entre claro e escuro.
 Todas as pessoas e cidades cadastradas foram simuladas com uma API REST utilizando o AXIOS para as chamadas da API e o Json-server para mockar as requisições de CRUD como se estivesse utilizando um banco de dados real. A utilização da biblioteca unform foi para fazer a validação dos dados de usuários no formulário de cadastros de pessoas e cidades, a utilização do YUP é para a validação dos inputs.
 
+## Tecnologias Utilizadas:
+
+- ReactJS
+- Typescript
+- Material UI
+- Axios
+- JSON-Server
+- Unform
+- YUP
+
 ## Como utilizar:
 
 Faça primeiro um clone deste repositório na sua máquina.
@@ -43,10 +53,7 @@ Entrando no projeto, pode realizar o cadastro de pessoas e cidades, modificar e 
 yarn add react-router-dom@6
 ```
 ```
-yarn add @mui/material @emotion/react @emotion/styled
-```
-```
-yarn add @mui/icons-material
+yarn add @mui/material @emotion/react @emotion/styled @mui/icons-material
 ```
 ```
 yarn add -D json-server
