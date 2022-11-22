@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import * as yup from 'yup'
 
-import { FerramentasDeDetalhe } from "../../shared/components/ferramentas-de-detalhe";
+import { FerramentasDeDetalhe } from "../../shared/components/FerramentasDeDetalhe";
 import { IVFormErrors } from "../../shared/form/IVFormErrors";
 import { VTextField } from "../../shared/form/VTextField";
 import { useForm } from "../../shared/hooks/useForm";

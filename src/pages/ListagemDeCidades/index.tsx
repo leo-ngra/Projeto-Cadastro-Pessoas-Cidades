@@ -4,7 +4,7 @@ import { Icon, IconButton, LinearProgress, Pagination, Paper, Table, TableBody, 
 
 import { LayoutBaseDePagina } from "../../shared/layouts/LayoutBaseDePagina";
 import { IListagemCidade, CidadesService } from "../../shared/services/api/CidadesService";
-import { FerramentasDaListagem } from "../../shared/components/ferramentas-da-listagem";
+import { FerramentasDaListagem } from "../../shared/components/FerramentasDaListagem";
 import { useDebounce } from "../../shared/hooks/useDebounce";
 import { Environment } from "../../shared/environment";
 

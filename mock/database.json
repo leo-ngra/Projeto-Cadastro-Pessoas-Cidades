@@ -7,77 +7,19 @@
       "cidadeId": 4
     },
     {
-      "id": 9,
-      "nomeCompleto": "Benta branca",
-      "email": "bentamaria@gmail.com",
-      "cidadeId": 1
-    },
-    {
-      "id": 10,
-      "email": "tatianesousa@gmail.com",
-      "cidadeId": 1,
-      "nomeCompleto": "Tatiane Sousa"
-    },
-    {
-      "id": 11,
-      "email": "jusca@gmail.com",
-      "cidadeId": 1,
-      "nomeCompleto": "Juca Silva"
-    },
-    {
-      "id": 12,
-      "email": "mariaparecida@gmail.com",
-      "cidadeId": 1,
-      "nomeCompleto": "Maria Aparecida"
-    },
-    {
-      "id": 13,
-      "email": "carlosnogueira@gmail.com",
-      "cidadeId": 1,
-      "nomeCompleto": "Carlos Nogueira"
-    },
-    {
-      "id": 14,
-      "email": "bentamaria@gmail.com",
-      "cidadeId": 1,
-      "nomeCompleto": "Benta Maria"
-    },
-    {
-      "id": 15,
-      "email": "tatianesousa@gmail.com",
-      "cidadeId": 1,
-      "nomeCompleto": "Tatiane Sousa"
-    },
-    {
-      "id": 16,
-      "nomeCompleto": "José de sousa",
-      "email": "jose@gmail.com",
-      "cidadeId": "1"
-    },
-    {
-      "nomeCompleto": "Leonardo Nogueira",
-      "email": "leonardo@gmail.com",
-      "cidadeId": "1",
-      "id": 17
-    },
-    {
-      "id": 18,
-      "nomeCompleto": "Ana Maria ",
-      "email": "ana@gmail.com",
-      "cidadeId": "1"
-    },
-    {
       "nomeCompleto": "Beto Silva",
       "email": "beto@gmail.com",
       "cidadeId": 5,
       "id": 19
+    },
+    {
+      "nomeCompleto": "Carlos",
+      "email": "carlos@gmail.com",
+      "cidadeId": 5,
+      "id": 20
     }
   ],
   "cidades": [
-    {
-      "nome": "Porto Alegre",
-      "id": 1
-    },
     {
       "nome": "São Paulo",
       "id": 2
@@ -101,6 +43,10 @@
     {
       "nome": "Praia grande",
       "id": 7
+    },
+    {
+      "nome": "Salvador",
+      "id": 8
     }
   ],
   "auth": {

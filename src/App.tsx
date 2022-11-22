@@ -1,5 +1,5 @@
 import { AppRoutes } from "./routes";
-import { MenuLateral } from "./shared/components/menu-lateral";
+import { MenuLateral } from "./shared/components/MenuLateral";
 
 
 export const App = () => {
@@ -13,3 +13,4 @@ export const App = () => {
     </div>
   );
 }
+ 
